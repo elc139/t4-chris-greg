@@ -6,8 +6,8 @@ Mariano Dorneles de Freitas & Talles Siqueira Ceolin
 
 ## Código Desenvolvido
 O código desenvolvido pode ser encontrado nos seguintes arquivos: 
-- [arquivo 1](https://github.com/elc139/t4-chris-greg/tree/master/virus_ver1) - Solução utilizando paralelismo na parte dos experimentos (trials);
-- [arquivo 2](https://github.com/elc139/t4-chris-greg/tree/master/virus_ver2) - Solução utilizando paralelismo na parte de probabilidades.
+- [Solução 1](https://github.com/elc139/t4-chris-greg/tree/master/virus_ver1) - Solução utilizando paralelismo na parte dos experimentos (trials);
+- [Solução 2](https://github.com/elc139/t4-chris-greg/tree/master/virus_ver2) - Solução utilizando paralelismo na parte de probabilidades.
 
 
 ## Slides
