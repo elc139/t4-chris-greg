@@ -25,7 +25,7 @@ Random::setSeedByTime()
    srand(seed);
 }
 
-// Retorna próximo número da seqüência pseudo-aleatória
+// Retorna prÃ³ximo nÃºmero da seqÃ¼Ãªncia pseudo-aleatÃ³ria
 // (valores entre 0.0 e 1.0)
 double
 Random::nextDouble()

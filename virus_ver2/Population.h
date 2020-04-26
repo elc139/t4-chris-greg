@@ -2,12 +2,12 @@
 #define __POPULATION_H
 
 #include "Random.h"
+#include <omp.h>
 
 //
-// Classe que representa uma popula��o contamin�vel.
+// Classe que representa uma população contaminável.
 //
-class Population
-{
+class Population{
    public:
 
       Population(int s);
@@ -35,17 +35,18 @@ class Population
 
    private:
 
-      // A popula��o � armazenada em uma matriz.
-      // Cada elemento � um indiv�duo que pode estar em 4 estados.
+      // A população é armazenada em uma matriz.
+      // Cada elemento é um indivíduo que pode estar em 4 estados.
 
       enum Person {
-         Uninfected,    // pessoa n�o infectada
+         Uninfected,    // pessoa não infectada
          Exposed,       // pessoa exposta
          Infected       // pessoa infectada
       };        
 
       Person** pop; 
       int size;
+      int numExposed;
 
 };
 

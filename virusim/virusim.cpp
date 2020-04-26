@@ -1,6 +1,6 @@
 //  
-// SimulaÃ§Ã£o de propagaÃ§Ã£o de vÃ­rus.
-// Adaptada de um cÃ³digo proposto por David Joiner (Kean University).
+// Simulação de propagação de vírus.
+// Adaptada de um código proposto por David Joiner (Kean University).
 //
 // Uso: virusim <tamanho-da-populacao> <nro. experimentos> <probab. maxima> 
 
@@ -28,12 +28,12 @@ int
 main(int argc, char* argv[]) 
 {
    
-   // parÃ¢metros dos experimentos
+   // parâmetros dos experimentos
    int population_size = 30;
    int n_trials = 5000;
    int n_probs = 101;
 
-   double* percent_infected; // percentuais de infectados (saÃ­da)
+   double* percent_infected; // percentuais de infectados (saída)
    double* prob_spread;      // probabilidades a serem testadas (entrada)
    double prob_min = 0.0;
    double prob_max = 1.0;
@@ -59,16 +59,16 @@ main(int argc, char* argv[])
 
          prob_spread[ip] = prob_min + (double) ip * prob_step;
          percent_infected[ip] = 0.0;
-         rand.setSeed(base_seed+ip); // nova seqÃ¼Ãªncia de nÃºmeros aleatÃ³rios
+         rand.setSeed(base_seed+ip); // nova seqüência de números aleatórios
 
-         // executa vÃ¡rios experimentos para esta probabilidade
+         // executa vários experimentos para esta probabilidade
          for (int it = 0; it < n_trials; it++) {
-            // queima floresta atÃ© o fogo apagar
+            // queima floresta até o fogo apagar
             population->propagateUntilOut(population->centralPerson(), prob_spread[ip], rand);
             percent_infected[ip] += population->getPercentInfected();
          }
 
-         // calcula mÃ©dia dos percentuais de Ã¡rvores queimadas
+         // calcula média dos percentuais de árvores queimadas
          percent_infected[ip] /= n_trials;
 
          // mostra resultado para esta probabilidade

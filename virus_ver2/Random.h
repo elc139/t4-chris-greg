@@ -2,7 +2,7 @@
 #define __RANDOM_H
 
 //  
-// Classe para geração de números pseudo-aleatórios.
+// Classe para geraÃ§Ã£o de nÃºmeros pseudo-aleatÃ³rios.
 //
 class Random
 {
@@ -10,7 +10,7 @@ class Random
       Random();
       Random(unsigned int s);
       
-      // Retorna próximo número da seqüência pseudo-aleatória
+      // Retorna prÃ³ximo nÃºmero da seqÃ¼Ãªncia pseudo-aleatÃ³ria
       // (valores entre 0.0 e 1.0)
       double nextDouble();
 

@@ -30,7 +30,7 @@ Population::propagateUntilOut(PersonPosn start_person, double prob_spread, Rando
    reset();
    exposePerson(start_person);
 
-   // queima a floresta atÃ© terminar o fogo
+   // queima a floresta até terminar o fogo
    count = 0;
    while (isPropagating()) {
       propagate(prob_spread, r);
@@ -46,7 +46,7 @@ Population::getPercentInfected()
    int total = size*size-1;
    int sum = 0;
 
-   // calcula quantidade de Ã¡rvores queimadas
+   // calcula quantidade de árvores queimadas
    for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
          if (pop[i][j] == Infected) {
@@ -54,7 +54,7 @@ Population::getPercentInfected()
          }
       }
    }
-   // retorna percentual de Ã¡rvores queimadas
+   // retorna percentual de árvores queimadas
    return ((double)(sum-1)/(double)total);
 }
 
@@ -62,7 +62,7 @@ void
 Population::propagate(double prob_spread, Random& r) 
 {
 
-   // pessoas expostas sÃ£o infectadas pelo vÃ­rus
+   // pessoas expostas são infectadas pelo vírus
    for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
          if (pop[i][j] == Exposed)   
@@ -70,7 +70,7 @@ Population::propagate(double prob_spread, Random& r)
       }
    }
 
-   // pessoas nÃ£o infectadas sÃ£o expostas ao vÃ­rus quando se aproximam de uma infectada
+   // pessoas não infectadas são expostas ao vírus quando se aproximam de uma infectada
    for (int i = 0;  i < size; i++) {
       for (int j = 0; j < size; j++) {
          if (pop[i][j] == Infected) {
